@@ -9,9 +9,9 @@
 
   <!-- styles -->
   <style type="text/css" media="screen">
-    * { margin: 0; padding: 0; color: #222; }
-    body { box-sizing: border-box; background-color: #eee }
-    a { text-decoration: none }
+    * { margin: 0; padding: 0; color: #212121; text-align: center; }
+    body { box-sizing: border-box; background-color: #fafafa; border-top: 0.5em solid #212121; }
+    a { text-decoration: none; color: #4285f4;}
   </style>
 </head>
 <body>
@@ -26,7 +26,7 @@
     </section>
     <footer>
       <p>This project is maintained by <a href="https://github.com/ethanneff">ethanneff</a></p>
-      <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      <p><small>&mdash; Hosted on GitHub Pages &mdash;</small></p>
     </footer>
   </div>
 
@@ -34,6 +34,7 @@
   <script type="text/javascript">
     (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode banner closeBanner creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setIdentity track validateCode".split(" "), 0);
 
+    // SET YOUR BRANCH_KEY HERE
     branch.init('key_live_jil7h9l2ZFFmIKUw1dEOrommqybtw274', null, function(err, data) {
       console.log(data);
     });
