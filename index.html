@@ -44,7 +44,7 @@
       $('#data1').text(String(data["data"]));
       $('#data2').text(data["data_parsed"]["~referring_link"]);
       var ref_link = data["data_parsed"]["~referring_link"];
-
+      console.log(ref_link);
       branch.link({
         tags: [ 'tag1', 'tag2' ],
         channel: 'facebook',
