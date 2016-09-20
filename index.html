@@ -41,7 +41,7 @@
 
     branch.init('key_test_ipm0bj4KV1SewSsRJw0kLppnzBpGlssf', null, function(err, data) {
       $('#data1').text(String(data["data"]));
-      $('#data2').text(String(data["data"]["~referring_link"]));
+      $('#data2').text(JSON.stringify(data["data"]["~referring_link"]));
 
       branch.link({
           tags: [ 'tag1', 'tag2' ],
