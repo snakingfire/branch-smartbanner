@@ -64,6 +64,7 @@
           '$og_image_url': 'http://myappwebsite.com/image.png'
         }
       }, function(err, link) {
+        console.log(link);
         $('data3').attr('href',link);
         $('data3').text(link);
       });
