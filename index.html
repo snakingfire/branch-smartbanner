@@ -43,8 +43,9 @@
     branch.init('key_test_ipm0bj4KV1SewSsRJw0kLppnzBpGlssf', null, function(err, data) {
       $('#data1').text(String(data["data"]));
       $('#data2').text(data["data"]["~referring_link"]);
-      var ref_link = data["data"]["~referring_link"];
-      console.log(ref_link);
+      // var ref_link = data["data"]["~referring_link"];
+      // console.log(ref_link);
+
       branch.link({
         tags: [ 'tag1', 'tag2' ],
         channel: 'facebook',
