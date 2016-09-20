@@ -12,6 +12,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; color: #212121; text-align: center; }
     body { background-color: #fafafa; border-top: 0.5em solid #212121; }
     a { text-decoration: none; color: #03a9f4; }
+    #data { width: 100%; }
   </style>
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
@@ -27,7 +28,7 @@
       <p><small>&mdash; Hosted on GitHub Pages &mdash;</small></p>
     </footer>
     <section>
-      <h2 id="data-fill">Depop</h2>
+      <h2 id="data">Data</h2>
     </section>
   </div>
 
@@ -40,7 +41,7 @@
     // SET YOUR BRANCH_KEY HERE
     branch.init('key_live_alrlcaKVteyBsPYgdgBBpnmdCEp9BjHf', null, function(err, data) {
       console.log(data);
-      $('#data-fill').text(JSON.stringify(data["data"]));
+      $('#data').text(JSON.stringify(data["data"]));
     });
 
     branch.banner({
