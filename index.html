@@ -29,8 +29,7 @@
     </footer>
     <section>
       <h2 id="data1">Data</h2>
-      <h2 id="data2">Data</h2>
-      <a  id="data3" href="" title="">link</a>
+      <a  id="data2" href="" title="">custom deep link</a>
     </section>
   </div>
 
@@ -42,7 +41,7 @@
 
     branch.init('key_test_ipm0bj4KV1SewSsRJw0kLppnzBpGlssf', null, function(err, data) {
       $('#data1').text(String(data["data"]));
-      $('#data2').text(data["data_parsed"]["~referring_link"]);
+
       var ref_link = data["data_parsed"]["~referring_link"];
       console.log(ref_link);
       branch.link({
@@ -59,8 +58,8 @@
           '$og_image_url': 'http://myappwebsite.com/image.png'
         }
       }, function(err, link) {
-        $('#data3').attr('href',link);
-        $('#data3').text(link);
+        $('#data2').attr('href',link);
+        $('#data2').text("custom deep link" + link);
       });
     });
 
