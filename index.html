@@ -28,39 +28,17 @@
       <p><small>&mdash; Hosted on GitHub Pages &mdash;</small></p>
     </footer>
     <section>
-      <h2 id="data1">Data</h2>
+      <h3 id="data1">Data</h3>
       <a  id="data2" href="" title="">custom deep link</a>
     </section>
   </div>
 
-  <!-- jquery -->
-  <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
   <!-- branch -->
   <script type="text/javascript">
     (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode banner closeBanner creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setIdentity track validateCode".split(" "), 0);
 
     branch.init('key_test_ipm0bj4KV1SewSsRJw0kLppnzBpGlssf', null, function(err, data) {
-      $('#data1').text(String(data["data"]));
       console.log(err,data);
-
-      var ref_link = data["data_parsed"]["~referring_link"];
-      branch.link({
-        tags: [ 'tag1', 'tag2' ],
-        channel: 'facebook',
-        feature: 'dashboard',
-        stage: 'new user',
-        data: {
-          mydata: ref_link,
-          foo: 'bar',
-          '$og_app_id': '12345',
-          '$og_title': 'My App',
-          '$og_description': 'My app\'s description.',
-          '$og_image_url': 'http://myappwebsite.com/image.png'
-        }
-      }, function(err, link) {
-        $('#data2').attr('href',link);
-        $('#data2').text(link);
-      });
     });
 
     branch.banner({
@@ -87,23 +65,6 @@
         "$og_title": "Fair And Square",
         "deeplink_text": "Created from Smart Banner Test Page"
       }
-    });
-
-    branch.deepview({
-      data: {
-        "$og_title": "Fair And Square",
-        "deeplink_text": "Created from Smart Banner Test Page",
-        "$desktop_url": "http://hf.forevernetworks.com/9Hrk/Oa0OEfzjSs",
-      },
-      feature: "feature",
-      channel: "channel",
-      tags: [ ['tag1'],['tag2'] ],
-      stage: "stage"
-    }, {
-      open_app: false,
-      make_new_link: false
-    }, function(err) {
-      console.log(err || 'no error');
     });
   </script>
 </body>
