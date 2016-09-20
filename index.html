@@ -41,7 +41,7 @@
     // SET YOUR BRANCH_KEY HERE
     branch.init('key_live_alrlcaKVteyBsPYgdgBBpnmdCEp9BjHf', null, function(err, data) {
       console.log(data);
-      $('#data').text(JSON.stringify(data["data"]));
+      $('#data').text(String(data["data"]));
     });
 
     branch.banner({
