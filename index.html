@@ -42,14 +42,14 @@
     branch.init('key_test_ipm0bj4KV1SewSsRJw0kLppnzBpGlssf', null, function(err, data) {
       console.log(err,data)
       $('#data1').text(String(data["data"]));
-
+      var ref = data["data_parsed"]["~referring_link"];
       branch.link({
         tags: [ 'tag1', 'tag2' ],
         channel: 'facebook',
         feature: 'dashboard',
         stage: 'new user',
         data: {
-          mydata: data["data_parsed"]["~referring_link"],
+          mydata: ref,
           foo: 'bar',
           '$og_app_id': '12345',
           '$og_title': 'My App',
