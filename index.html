@@ -44,32 +44,33 @@
       $('#data').text(String(data["data"]));
 
       var referring_link = data["data"]["~referring_link"];
-      branch.banner({
-        icon: 'http://icons.iconarchive.com/icons/wineass/ios7-redesign/512/Appstore-icon.png',
-        title: referring_link,
-        description: 'The Branch demo app!',
-        rating: 5,                              // Displays a star rating out of 5. Supports half stars through increments of .5
-        reviewCount: 1500,                      // Amount of reviews your app has received next to the star rating
-        theme: 'light',                         // Overrides the default color theme of the banner. Possible values 'light' or 'dark'.
-        openAppButtonText: 'Open',              // Text to show on button if the user has the app installed
-        downloadAppButtonText: 'Download',      // Text to show on button if the user does not have the app installed
-        sendLinkText: 'Send Link',              // Text to show on desktop button to allow users to text themselves the app
-        iframe: true,                           // Show banner in an iframe, recomended to isolate Branch banner CSS
-        disableHide: false,                     // Should the user have the ability to hide the banner? (show's X on left side)
-        forgetHide: true,                       // Should we show the banner after the user closes it? Can be set to true, or an integer to show again after X days
-        position: 'top',                        // Sets the position of the banner, options are: 'top' or 'bottom', and the default is 'top'
-        mobileSticky: false,                    // Determines whether the mobile banner will be set `position: fixed;` (sticky) or `position: absolute;`, defaults to false *this property only applies when the banner position is 'top'
-        desktopSticky: true,                    // Determines whether the desktop banner will be set `position: fixed;` (sticky) or `position: absolute;`, defaults to true *this property only applies when the banner position is 'top'
-        customCSS: '.title { color: #F00; }',   // Add your own custom styles to the banner that load last, and are gauranteed to take precedence, even if you leave the banner in an iframe
-        make_new_link: true,                    // Should the banner create a new link, even if a link already exists?
-        open_app: true                          // Should the banner try to open the app passively (without the user actively clicking) on load?
-      }, {
-        data: {
-          "$og_title": "Fair And Square",
-          "deeplink_text": "Created from Smart Banner Test Page"
-          "prev_referring_link": referring_link,
-        }
-      });
+    });
+
+    branch.banner({
+      icon: 'http://icons.iconarchive.com/icons/wineass/ios7-redesign/512/Appstore-icon.png',
+      title: referring_link,
+      description: 'The Branch demo app!',
+      rating: 5,                              // Displays a star rating out of 5. Supports half stars through increments of .5
+      reviewCount: 1500,                      // Amount of reviews your app has received next to the star rating
+      theme: 'light',                         // Overrides the default color theme of the banner. Possible values 'light' or 'dark'.
+      openAppButtonText: 'Open',              // Text to show on button if the user has the app installed
+      downloadAppButtonText: 'Download',      // Text to show on button if the user does not have the app installed
+      sendLinkText: 'Send Link',              // Text to show on desktop button to allow users to text themselves the app
+      iframe: true,                           // Show banner in an iframe, recomended to isolate Branch banner CSS
+      disableHide: false,                     // Should the user have the ability to hide the banner? (show's X on left side)
+      forgetHide: true,                       // Should we show the banner after the user closes it? Can be set to true, or an integer to show again after X days
+      position: 'top',                        // Sets the position of the banner, options are: 'top' or 'bottom', and the default is 'top'
+      mobileSticky: false,                    // Determines whether the mobile banner will be set `position: fixed;` (sticky) or `position: absolute;`, defaults to false *this property only applies when the banner position is 'top'
+      desktopSticky: true,                    // Determines whether the desktop banner will be set `position: fixed;` (sticky) or `position: absolute;`, defaults to true *this property only applies when the banner position is 'top'
+      customCSS: '.title { color: #F00; }',   // Add your own custom styles to the banner that load last, and are gauranteed to take precedence, even if you leave the banner in an iframe
+      make_new_link: true,                    // Should the banner create a new link, even if a link already exists?
+      open_app: true                          // Should the banner try to open the app passively (without the user actively clicking) on load?
+    }, {
+      data: {
+        "$og_title": "Fair And Square",
+        "deeplink_text": "Created from Smart Banner Test Page"
+        "prev_referring_link": referring_link,
+      }
     });
 
     branch.deepview({
