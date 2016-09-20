@@ -28,6 +28,7 @@
     </footer>
     <section>
       <h2 id="data-fill">Depop</h2>
+      <h2 id="data-fill2">Depop</h2>
     </section>
 
   </div>
@@ -42,6 +43,7 @@
     branch.init('key_live_alrlcaKVteyBsPYgdgBBpnmdCEp9BjHf', null, function(err, data) {
       console.log(data);
       $('data-fill').text(data);
+      $('data-fill').text("hello");
     });
 
     branch.banner({
